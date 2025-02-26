@@ -1,16 +1,17 @@
 """ Hello Module"""
+from hello_utils import print_module_info
 from pathlib import Path
 import time
 import datetime
 
-print("Hello, World! - from Module")
+print("\nHello, World! - from Module")
 
-print()
-print("filename of __file__ is      :", Path(__file__).name)
-print("__name__ is                  :", __name__)
-print("current working directory is :", Path.cwd())
-print("directory of __file__ is     :", Path(__file__).parent)
-
+print_module_info(__file__, __name__)
+#print()
+#print("filename of __file__ is      :", Path(__file__).name)
+#print("__name__ is                  :", __name__)
+#print("current working directory is :", Path.cwd())
+#print("directory of __file__ is     :", Path(__file__).parent)
 
 def get_greet():
     match time.localtime().tm_hour:
